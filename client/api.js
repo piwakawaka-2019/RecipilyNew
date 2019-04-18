@@ -10,3 +10,16 @@ export function getRecipe (searchDetails, callback) {
       callback(err, res.body)
     })
 }
+
+
+export function getData () {
+ 
+  return request.get('/v1/getData')
+    .then(res => {
+      const data = res.body
+      return data
+    })
+    .catch(() => {
+      throw Error('You need to implement an API route for /v1/getData')
+    })
+}
