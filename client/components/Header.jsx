@@ -3,7 +3,7 @@ import MainNav from './MainNav';
 
 const Header = (props) => {
   return (
-    <div>
+    <div className="header">
       <MainNav />
     </div>
   )

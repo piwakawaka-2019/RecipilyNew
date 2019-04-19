@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainNav = (props) => {
   return (
-    <div>
+    <div className="main-name">
       <h1>I am a MainNavBar</h1>
     </div>
   )

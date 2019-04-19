@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    // "@material-ui/core": "^3.9.3",
     "express": "^4.16.4",
     "footer": "^1.0.0",
     "knex": "^0.16.5",

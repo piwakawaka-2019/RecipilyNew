@@ -4,7 +4,7 @@ import RecipeSnippet from './RecipeSnippet'
 
 const NavLeft = (props) => {
   return (
-    <div>
+    <div className="nav-left">
       <RecipeSnippet />
     </div>
   )
