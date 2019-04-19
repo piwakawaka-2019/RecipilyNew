@@ -4,29 +4,77 @@
     padding: 0;
     }
 
-/* colour schemes:
-sage = #B5CA8D
-asparagus = #8BB174
-deep space sparkle = #426B69
-space cadet = #222E50
-japanese indigo = #2A4849 */
-
 
 .wrapper {
-    background: #426B69;
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-gap: 5px;
 }
 
-.main-nav {
+    
+.nav-container {
     grid-column: 1/-1;
-}
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1.5em;
+    align-items: center;
+    text-align: center;
+    background: #181D27;
+  }
+  
+  .one {
+    grid-column: 1;
+  }
+  
+  .two {
+    grid-column: 2;
+  }
+  
+  .logo {  
+    grid-column: 3;
+    margin: 9px;
+    background-image: url("images/harvest.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 5vh;
+  }
+  
+  .three {
+    grid-column: 4;
+  }
+  
+  .four {
+    grid-column: 5;
+  }
+  
+  .navLinks {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  /* .navLinks:hover {
+    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 1em 1em;
+  } */
+
 
 .nav-left {
+    letter-spacing: .7px;
+    color: whitesmoke;
+    background: #254D32;
+    padding: 13px;
+    font-size: 0.5em;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -34,6 +82,11 @@ japanese indigo = #2A4849 */
 }
 
 .main {
+    color: whitesmoke;
+    letter-spacing: .7px;
+    padding: 17px;
+    background: #3A7D44;
+    font-size: 0.5em;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -41,14 +94,26 @@ japanese indigo = #2A4849 */
 }
 
 .aside {
+    color: whitesmoke;
+    letter-spacing: .7px;
+    background: #69B578;
+    padding: 13px;
     display: flex;
+    font-size: 0.5em;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
 }
 
 .footer {
+    font-size: 7px;
+    letter-spacing: .4px;
+    background: #181D27;
+    color: whitesmoke;
     grid-column: 1/-1;
+    text-align: center;
+    padding: 20px;
+
 }
 
 .landing {
