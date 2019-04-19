@@ -26,17 +26,16 @@ const recipeUrl = 'https://www.googleapis.com/books/v1/volumes?q=intitle:'
 
 //recipe
 
-export function getRecipe (ingredient) {
+export function getRecipes (ingredient = 'chicken', callback) {
   const authID = '0e431408'  
   const Key = '63d46ac9bcf18fc9551666a77f63168d'
   const recipeUrl = `https://api.edamam.com/search?q=${ingredient}&app_id=${authID}&app_key=${Key}&from=0&to=10` 
+  
   return request.get(recipeUrl)
-    .then((err, res) => {
-      return res.body
+    .end((err, res) => {
+      callback(res.body.hits)
     })
-    .catch(err => {
-      return err;
-    })
+
 }
 
 

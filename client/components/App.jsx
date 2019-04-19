@@ -7,6 +7,9 @@ import Aside from './Aside'
 import NavLeft from './NavLeft'
 
 
+import * as api from '../api'
+import MainNav from './MainNav';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props)
@@ -21,24 +24,23 @@ export default class App extends React.Component {
     this.getRecipes()
   }
 
-  getRecipes = async (searchTerm) => {
-
-    try{
-      let recipes = await api.getRecipes(searchTerm);
-      this.setState({
-        recipes: recipes || []
-      })
-    }
-    catch(err){this.setState({err: err})}
+  getRecipes = (searchTerm = 'chicken') => {
+    api.getRecipes(searchTerm, this.setRecipes)
   }
 
+  setRecipes = (recipes) => {
+        this.setState({
+          recipes: recipes || []
+        })
+    }
 
 
   render() {
+    console.log('recipes', this.state.recipes);
     return (
       <div>
-        <Header />
-        <NavLeft />
+       <MainNav search={this.getRecipes}/>
+        <NavLeft recipes={this.state.recipes}/>
         <Main />
         <Aside />
         <Footer />
