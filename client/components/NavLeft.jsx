@@ -1,10 +1,11 @@
 import React from 'react'
+import RecipeSnippet from './RecipeSnippet'
 
 
 const NavLeft = (props) => {
   return (
     <div>
-      <h1>I am a left hand navigational bar</h1>
+      <RecipeSnippet />
     </div>
   )
 }
