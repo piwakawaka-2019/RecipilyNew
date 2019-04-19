@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Header from './Header'
+import NavBar from './NavBar'
 import Footer from './Footer'
 import Main from './Main'
 import Aside from './Aside'
@@ -14,8 +14,8 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Header />
+      <div className="wrapper">
+        <NavBar />
         <NavLeft />
         <Main />
         <Aside />
