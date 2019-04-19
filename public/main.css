@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -59,3 +60,9 @@ japanese indigo = #2A4849 */
     /* vertically center content */
 }
 
+||||||| merged common ancestors
+=======
+h1 {
+    color: blue;
+}
+>>>>>>> 23792c79f801034df0bca619df88190ed37fb918
