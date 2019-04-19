@@ -18,12 +18,18 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <Main />
-        <Footer />
         <MainNav />
-        <Aside />
-        <RecipeSnippet />
+
+        <Main />
         <NavLeft />
+        <RecipeSnippet />
+        <Aside />
+
+        <Footer />
+        
+        
+        
+        
 
       </div>
     )

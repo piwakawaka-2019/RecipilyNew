@@ -28,3 +28,23 @@ export function getRecipe (searchDetails, callback) {
     })
 }
 
+
+
+export function addItem (itemName, userID) {
+  return request.post('/v1/addItem')
+    .send({name:itemName, user_id:userID})
+    .then(res => {
+      const returnedItem = res.body
+      return returnedItem
+    })
+}
+
+
+export function getItems (userID) {
+  return request.get('/v1/getItems')
+    .send(userID)
+    .then(res => {
+      const returnedItems = res.body
+      return returnedItems
+    })
+}

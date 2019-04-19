@@ -4,21 +4,25 @@ const db = require('../db/db')
 
 const router = express.Router()
 
-router.get('/getData', async (req, res) => {
+router.get('/getItems', async (req, res) => {
+
+    const userID = req.body;
+
     try{
-        const data = await db.getData();
-        res.json(data)
+        const items = await db.getItems(userID);
+        res.json(items)
     }
     catch(err){console.log('err: ', err)}
 })
 
-router.post('/postData', async (req, res) => { 
-    const receivedData = req.body;
+router.post('/addItem', async (req, res) => { 
+
+    const data = req.body;
 
     try{
-        const id = await db.addData(receivedData)
-        const newData = await db.getData(id[0]);
-        res.json(newData)
+        const id = await db.addItem(data)
+        const newItem = await db.getItem(id[0]);
+        res.json(newItem)
     }
     catch(err){console.log('err: ', err)}
 

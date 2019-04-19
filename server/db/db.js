@@ -1,14 +1,23 @@
 const config = require('../../knexfile').development
 const database = require('knex')(config)
 
-function getData (db = database) {
-    return db('Table_Name').select()
+function getItems (userID, db = database) {
+    return db('Items')
+    .where('user_id', '=', userID)
+    .select()
 
 }
 
-function addData (data, db = database) {
-    return db('Table_Name')
+function addItem (data, db = database) {
+    return db('Items')
     .insert(data)
+}
+
+function getItem(id, db = database) {
+    return db('Items')
+    .where('id', '=', id)
+    .select()
+    .first()
 }
 
 function updateData (updatedData, db = database) {
@@ -27,8 +36,9 @@ function deleteData (id, db = database) {
 }
 
 module.exports = {
-    getData,
-    addData,
+    getItems,
+    addItem,
+    getItem,
     updateData,
     deleteData
 }
