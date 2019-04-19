@@ -21,7 +21,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount () {
-    this.getRecipes()
+    //this.getRecipes()
   }
 
   getRecipes = (searchTerm = 'chicken') => {
@@ -36,21 +36,10 @@ export default class App extends React.Component {
 
 
   render() {
-    console.log('recipes', this.state.recipes);
     return (
-<<<<<<< HEAD
-      <div>
-       <MainNav search={this.getRecipes}/>
-        <NavLeft recipes={this.state.recipes}/>
-||||||| merged common ancestors
-      <div>
-        <Header />
-        <NavLeft />
-=======
       <div className="wrapper">
-        <NavBar />
-        <NavLeft />
->>>>>>> 519ea4ac8a8721ff6fe0e9e3d2fd197685da60a7
+      <NavBar search={this.getRecipes}/>
+        <NavLeft recipes={this.state.recipes}/>
         <Main />
         <Aside />
         <Footer />

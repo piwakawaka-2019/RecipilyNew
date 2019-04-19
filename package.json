@@ -29,12 +29,7 @@
     ]
   },
   "dependencies": {
-<<<<<<< HEAD
-||||||| merged common ancestors
-    // "@material-ui/core": "^3.9.3",
-=======
     "@material-ui/core": "^3.9.3",
->>>>>>> 519ea4ac8a8721ff6fe0e9e3d2fd197685da60a7
     "express": "^4.16.4",
     "footer": "^1.0.0",
     "knex": "^0.16.5",

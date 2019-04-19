@@ -1,22 +1,24 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     }
-
-
-.wrapper {
-    font-family: 'Roboto', sans-serif;
+ 
+    .food-title  {
+        font-size: 11px;
+    }
+ 
+ .wrapper {
+    font-family: ‘Roboto’, sans-serif;
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto 1fr auto;
     grid-gap: 5px;
-}
-
-    
-.nav-container {
+ }
+ 
+ 
+ .nav-container {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -26,50 +28,50 @@
     text-align: center;
     background: #181D27;
   }
-  
+ 
   .one {
     grid-column: 1;
   }
-  
+ 
   .two {
     grid-column: 2;
   }
-  
-  .logo {  
+ 
+  .logo {
     grid-column: 3;
     margin: 9px;
-    background-image: url("images/harvest.png");
+    background-image: url('images/harvest.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 5vh;
   }
-  
+ 
   .three {
     grid-column: 4;
   }
-  
+ 
   .four {
     grid-column: 5;
   }
-  
+ 
   .navLinks {
-    font-family: 'Roboto', sans-serif;
+    font-family: ‘Roboto’, sans-serif;
     font-size: 0.9em;
     text-transform: uppercase;
     text-decoration: none;
     color: whitesmoke;
   }
-  
+ 
   /* .navLinks:hover {
     color: white;
     border-left: 1px solid white;
     border-right: 1px solid white;
     padding: 1em 1em;
   } */
-
-
-.nav-left {
+ 
+ 
+ .nav-left {
     letter-spacing: .7px;
     color: whitesmoke;
     background: #254D32;
@@ -79,9 +81,9 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-}
-
-.main {
+ }
+ 
+ .main {
     color: whitesmoke;
     letter-spacing: .7px;
     padding: 17px;
@@ -91,9 +93,9 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-}
-
-.aside {
+ }
+ 
+ .aside {
     color: whitesmoke;
     letter-spacing: .7px;
     background: #69B578;
@@ -103,9 +105,9 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-}
-
-.footer {
+ }
+ 
+ .footer {
     font-size: 7px;
     letter-spacing: .4px;
     background: #181D27;
@@ -113,21 +115,14 @@
     grid-column: 1/-1;
     text-align: center;
     padding: 20px;
-
-}
-
-.landing {
+ 
+ }
+ 
+ .landing {
     width: 100%;
     height: 100%;
     opacity: 0.5;
     text-align: center;
-
+ 
     /* vertically center content */
-}
-
-||||||| merged common ancestors
-=======
-h1 {
-    color: blue;
-}
->>>>>>> 23792c79f801034df0bca619df88190ed37fb918
+ }
